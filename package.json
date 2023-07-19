@@ -1,0 +1,37 @@
+{
+  "name": "@practicaljs/ts-kit",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "author": {
+    "name": "Harlen Alvarez",
+    "email": "halvarez18@msn.com",
+    "url": "https://github.com/harlenalvarez"
+  },
+  "description": "Set of TS utilities to use with or without react",
+  "exports": {
+    ".": {
+      "import": "./dist/ts-kit.js",
+      "require": "./dist/ts-kit.umd.cjs"
+    }
+  },
+  "main": "dist/ts-kit.umd.cjs",
+  "module": "dist/ts-kit.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/harlenalvarez/ts-kit",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "ts helper methods"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "prepack": "npm run build && json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
+    "postpublish": "git checkout ./package.json",
+    "test": "vitest run",
+    "test:w": "vitest"
+  }
+}
