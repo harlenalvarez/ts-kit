@@ -1,6 +1,6 @@
 {
   "name": "@practicaljs/ts-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "type": "module",
   "author": {
@@ -11,6 +11,7 @@
   "description": "Set of TS utilities to use with or without react",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/ts-kit.js",
       "require": "./dist/ts-kit.umd.cjs"
     }
